@@ -37,7 +37,6 @@ impl<'t> ParserState<'t> {
                offset: 0 }
     }
 
-    ///
     /// Steps through the given statement, word by word, and internally
     /// updates the parser state accordingly (i.e. saves which parsed
     /// objects have been seen and which data they contain).

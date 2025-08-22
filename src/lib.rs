@@ -13,7 +13,6 @@ mod parser;
 mod scanner;
 mod types;
 
-///
 /// make_compiler_impl
 ///
 /// This is a shorthand for generating a high-level compiler function.

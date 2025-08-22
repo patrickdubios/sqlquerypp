@@ -1,5 +1,4 @@
-/// Datastructs for python bindings.
-
+//! Datastructs for python bindings.
 use pyo3::{pyclass, pymethods};
 
 #[pyclass]

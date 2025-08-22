@@ -24,13 +24,13 @@ impl TokenState {
 
 /// Returns the position of a required character.
 ///
-/// - `cursor` and `end` determine which substring of `statement`
-///   should be scanned.
+/// - `cursor` and `end` determine which substring of `statement` should be
+///   scanned.
 /// - `character`: the character whose position should be retuend
-/// - `keyword`: relevant for constructing the error message in case
-///   the character has not been found. Primarily meant for constructing
-///   an error message with semantics like "expected 'combined_result'
-///   (the keyword) should have been closed with '}' (the character)".
+/// - `keyword`: relevant for constructing the error message in case the
+///   character has not been found. Primarily meant for constructing an error
+///   message with semantics like "expected 'combined_result' (the keyword)
+///   should have been closed with '}' (the character)".
 ///
 /// The returned offset is absolute to the entire statement, not just
 /// the scanned slice.
