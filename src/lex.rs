@@ -1,4 +1,4 @@
-/// Constants which are used while parsing.
+//! Constants which are used while parsing.
 
 pub const WORD_DELIMITER: &str = " ";
 
