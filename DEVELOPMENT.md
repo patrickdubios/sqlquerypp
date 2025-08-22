@@ -66,3 +66,17 @@ This package is mainly separated into two components:
 
   - `codegen/` provides common structs, traits and functions for
     generating valid SQL statements from a `FinalParserState`.
+
+## Manual release workflow
+
+- `source .venv/bin/activate`
+
+- `maturin build --release`
+
+  - if successful, returns output like "Built wheel for CPython 3.13 to 'PATH'"
+
+- `maturin upload <PATH>` (use 'PATH' from last command)
+
+  - **NOTE**: This requires token-based authentication. As this is just a
+    quick-and-dirty solution which should not be necessary for long, I
+    won't document this further.
