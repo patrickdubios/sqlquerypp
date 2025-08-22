@@ -4,6 +4,8 @@
       col_a1
     FROM
       table_a
+    WHERE
+      criteria = %s
   )
   SELECT
     0,
@@ -46,6 +48,8 @@ UNION ALL
       col_a1
     FROM
       table_a
+    WHERE
+      criteria = %s
   )
   SELECT
     0,

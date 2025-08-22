@@ -5,10 +5,10 @@ use pyo3::{pyclass, pymethods};
 #[derive(Clone)]
 pub struct CombinedResultNodeSlice {
     #[pyo3(get)]
-    pub begin: usize,
+    pub scope_begin: usize,
 
     #[pyo3(get)]
-    pub end: usize,
+    pub scope_end: usize,
 }
 
 #[pyclass]

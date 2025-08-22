@@ -1,6 +1,6 @@
 class CombinedResultNodeSlice:
-    begin: int
-    end: int
+    scope_begin: int
+    scope_end: int
 
 class CompiledQueryDescriptor:
     statement: str

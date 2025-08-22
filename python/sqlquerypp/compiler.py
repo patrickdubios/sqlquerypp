@@ -40,10 +40,10 @@ class Compiler(ABC):
         last_parameters_offset = 0
         for slice in descriptor.combined_result_node_slices:
             parameters_outside_combined_result = template.statement[
-                last_statement_offset : slice.begin
+                last_statement_offset : slice.scope_begin
             ].count(self._variable_placeholder)
             parameters_within_combined_result = template.statement[
-                slice.begin : slice.end
+                slice.scope_begin : slice.scope_end
             ].count(self._variable_placeholder)
 
             final_parameters += template.parameters[
@@ -60,7 +60,7 @@ class Compiler(ABC):
                     + parameters_within_combined_result
                 ]
             last_parameters_offset += parameters_within_combined_result
-            last_statement_offset = slice.end
+            last_statement_offset = slice.scope_end
 
         if last_statement_offset < len(template.statement):
             final_parameters += template.parameters[last_parameters_offset:]
@@ -97,6 +97,7 @@ class MySQL84Compiler(Compiler):
     An implementation compiling `sqlquerypp` specific syntax to valid MySQL 8.4
     queries.
     """
+
     def _compile_template(self, statement: str) -> CompiledQueryDescriptor:
         if self.pep_249_placeholders:
             statement = statement.replace("%s", "?")

@@ -66,9 +66,9 @@ impl MySql84QueryCompiler for FinalParserState {
                                               .iter()
                                               .map(|node| {
                                                   CombinedResultNodeSlice {
-                begin: node.get_begin_position(),
-                end: node.get_end_position(),
-            }
+                        scope_begin: node.get_scope_begin_position(),
+                        scope_end: node.get_end_position(),
+                    }
                                               })
                                               .collect();
         let descriptor =

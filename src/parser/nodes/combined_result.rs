@@ -54,6 +54,10 @@ impl Node for CompleteCombinedResultNode {
         self.begin_position
     }
 
+    fn get_scope_begin_position(&self) -> usize {
+        self.inner_query_begin
+    }
+
     fn get_end_position(&self) -> usize {
         self.end_position
     }
