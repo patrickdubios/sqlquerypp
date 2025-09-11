@@ -26,7 +26,7 @@ impl TokenState {
 ///
 /// - `cursor` and `end` determine which substring of `statement` should be
 ///   scanned.
-/// - `character`: the character whose position should be retuend
+/// - `character`: the character whose position should be returned
 /// - `keyword`: relevant for constructing the error message in case the
 ///   character has not been found. Primarily meant for constructing an error
 ///   message with semantics like "expected 'combined_result' (the keyword)
