@@ -1,0 +1,57 @@
+[project]
+name = "sqlquerypp"
+version = "0.1.0a4"
+description = "SQL query preprocessor for generating optimized queries"
+readme = "README.md"
+repository = "https://github.com/puzzleYOU/sqlquerypp"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+    "Typing :: Typed",
+]
+
+[project.urls]
+source = "https://github.com/puzzleYOU/sqlquerypp"
+
+[build-system]
+requires = ["maturin>=1.9,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+python-source = "python"
+features = ["pyo3/extension-module"]
+
+[tool.mypy]
+files = "python/**/*.py"
+python_version = "3.13"
+strict = true
+
+[tool.ruff]
+indent-width = 4
+line-length = 80
+src = ["python"]
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = []
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 60
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
