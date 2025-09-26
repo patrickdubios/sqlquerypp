@@ -14,6 +14,7 @@ lint:
         mypy --check
         cargo fmt --check
         cargo clippy --all-targets --all-features -- --deny warnings
+        mado check
 
 format:
         ruff format
